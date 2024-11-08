@@ -1,0 +1,147 @@
+/* General container for the cart page */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 0.5rem;
+  padding: 0;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  list-style: none;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  padding: 0 1rem;
+}
+
+.cart-item-quantity select {
+  width: 4rem;
+  border: 1px solid lightgrey;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+.cart-item-remove .remove-button {
+  padding: 0.5rem;
+  background-color: #e72929;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  opacity: 0.7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item-remove .remove-button:hover {
+  opacity: 1;
+}
+
+/* Checkout section */
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.checkout-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.foods-count,
+.total-price {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+.checkout a.proceed-to-checkout {
+  padding: 1rem;
+  background-color: #e72929;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 1rem;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.checkout a.proceed-to-checkout:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-details,
+  .cart-item-quantity,
+  .cart-item-price,
+  .cart-item-remove {
+    margin-bottom: 1rem;
+  }
+
+  .checkout-summary {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item-image img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .cart-item-details,
+  .cart-item-quantity {
+    font-size: 1rem;
+  }
+
+  .checkout a.proceed-to-checkout {
+    padding: 0.8rem;
+  }
+}

@@ -1,0 +1,76 @@
+/* Center the login form on the page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  /* Login card styling */
+  .login-card {
+    width: 22rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #e72929;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  input {
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #e72929;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #cc2525;
+  }
+  
+  /* Footer links */
+  .login-footer {
+    margin-top: 1rem;
+  }
+  
+  .login-footer a {
+    color: #e72929;
+    margin-left: 0.3rem;
+    transition: color 0.2s;
+  }
+  
+  .login-footer a:hover {
+    color: #cc2525;
+  }
+  

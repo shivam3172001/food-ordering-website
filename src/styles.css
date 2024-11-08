@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size:16px;
+}
+
+html,
+button{
+  font-family: "Quicksand", "sans-serif";
+}
+
+body{
+  margin: 0;
+  /* background-image: linear-gradient(to right, red , yellow); */
+  background-color: rgb(218, 222, 220);
+}
+
+a{
+  text-decoration: none;
+}
+/* Primary color */
+:root {
+  --primary-color: #1e90ff;
+}
+
+body {
+  font-family: 'YourFont', sans-serif;
+}

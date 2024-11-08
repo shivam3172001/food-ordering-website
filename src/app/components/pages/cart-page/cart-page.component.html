@@ -1,0 +1,46 @@
+<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+
+<app-not-found
+  [visible]="!cart || !cart.items.length"
+  notFoundMessage="Your Cart is Empty!"
+  resetLinkText="Go To Homepage"
+></app-not-found>
+
+<div *ngIf="cart && cart.items.length" class="cart-container">
+  <ul class="cart-items-list">
+    <li *ngFor="let cartItem of cart.items" class="cart-item">
+      <div class="cart-item-image">
+        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+      </div>
+      <div class="cart-item-details">
+        <a routerLink="/food/{{cartItem.food.id}}">
+          {{cartItem.food.name}}
+        </a>
+      </div>
+      <div class="cart-item-quantity">
+        <select #quantitySelect
+          [value]="cartItem.quantity"
+          (change)="changeQuantity(cartItem, quantitySelect.value)">
+          <option *ngFor="let qty of [1, 2, 3, 4, 5]" [value]="qty">{{ qty }}</option>
+        </select>
+      </div>
+      <div class="cart-item-price">
+        {{ cartItem.price | currency }}
+      </div>
+      <div class="cart-item-remove">
+        <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="checkout">
+    <div class="checkout-summary">
+      <div class="foods-count">{{cart.totalCount}} items</div>
+      <div class="total-price">{{cart.totalPrice | currency}}</div>
+    </div>
+
+    <a routerLink="/checkout" class="proceed-to-checkout">Proceed to Checkout</a>
+  </div>
+</div>
